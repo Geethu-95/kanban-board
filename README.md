@@ -16,3 +16,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 #### 1. Create new tasks under any of the categories
 #### 2. Move tasks between any of the categories
 #### 3. Strikethrough tasks by clicking on task name
+#### 4. Switch between lught and dark modes
