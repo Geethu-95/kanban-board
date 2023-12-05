@@ -222,7 +222,7 @@ const Board = () => {
                             {item.content}<br></br><br></br>
                             <h6>People involved</h6>
                             {item.people&&item.people.map((person) => (person &&
-                                <div display="inline-block">
+                                <div className='peopleAvatar'>
                                     <Avatar style={{ width: '45px', height: '45px' }} key={person} sx={{ bgcolor: deepOrange[500] }}>{person}</Avatar>
                                 </div>
                             ))}
@@ -251,7 +251,7 @@ const Board = () => {
                             {item.content}<br></br><br></br>
                             <h6>People involved</h6>
                             {item.people&&item.people.map((person) => (person &&
-                                <div display="inline-block">
+                                <div className='peopleAvatar'>
                                     <Avatar style={{ width: '45px', height: '45px' }} key={person} sx={{ bgcolor: deepOrange[500] }}>{person}</Avatar>
                                 </div>
                             ))}
@@ -278,7 +278,7 @@ const Board = () => {
                             {item.content}<br></br><br></br>
                             <h6>People involved</h6>
                             {item.people&&item.people.map((person) => (person &&
-                                <div display="inline-block">
+                                <div className='peopleAvatar'>
                                     <Avatar style={{ width: '45px', height: '45px' }} key={person} sx={{ bgcolor: deepOrange[500] }}>{person}</Avatar>
                                 </div>
                             ))}
