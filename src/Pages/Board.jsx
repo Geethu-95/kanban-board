@@ -174,7 +174,7 @@ const Board = () => {
     };
 
     return (
-        <div className='container-fluid' style={{backgroundColor:'#F5F5F5',width:'100%',height:'100vh'}}>
+        <div className='container-fluid containerStyle' >
             <div className="board row">
                 <h1>Kanban Board </h1><h5>(basic)</h5><br></br><br></br><br></br>
                 <div
