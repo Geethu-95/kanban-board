@@ -174,7 +174,7 @@ const Board = () => {
     };
 
     return (
-        <div className='container'>
+        <div className='container-fluid' style={{backgroundColor:'#F5F5F5',width:'100%',height:'100vh'}}>
             <div className="board row">
                 <h1>Kanban Board </h1><h5>(basic)</h5><br></br><br></br><br></br>
                 <div
@@ -185,7 +185,7 @@ const Board = () => {
                     onDragOver={allowDrop}
                     onDrop={drop}
                 >
-                    <h3>Ready ({readyCount})</h3> <br></br>
+                    <h3 style={{borderBottom:'5px solid grey'}}>Ready ({readyCount})</h3> <br></br>
                     {cards.filter(card => card.state === 'ready').map((item) => (
                         <div key={item.id} className="card" draggable="true" onDragStart={drag} data-id={item.id}>
                             <h3 onClick={crossLine}>{item.name}</h3>
@@ -213,7 +213,7 @@ const Board = () => {
                     onDragOver={allowDrop}
                     onDrop={drop}
                 >
-                    <h3>In Progress ({ipCount})</h3> <br></br>
+                    <h3 style={{borderBottom:'5px solid blue'}}>In Progress ({ipCount})</h3> <br></br>
                     {cards.filter(card => card.state === 'ip').map(item => (
                         <div key={item.id} className="card" draggable="true" onDragStart={drag} data-id={item.id}>
 
@@ -241,7 +241,7 @@ const Board = () => {
                     onDrop={drop}
 
                 >
-                    <h3>Testing ({testingCount})</h3> <br></br>
+                    <h3 style={{borderBottom:'5px solid orange'}}>Testing ({testingCount})</h3> <br></br>
                     {cards.filter(card => card.state === 'testing').map(item => (
                         <div key={item.id} className="card" draggable="true"
                             onDragStart={drag} data-id={item.id}>
@@ -269,7 +269,7 @@ const Board = () => {
                     onDragOver={allowDrop}
                     onDrop={drop}
                 >
-                    <h3>Done ({doneCount})</h3> <br></br>
+                    <h3 style={{borderBottom:'5px solid green'}}>Done ({doneCount})</h3> <br></br>
                     {cards.filter(card => card.state === 'done').map(item => (
                         <div key={item.id} className="card" draggable="true" onDragStart={drag} data-id={item.id}>
                             {/* <Card > */}
