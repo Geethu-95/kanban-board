@@ -141,11 +141,14 @@ const Board = () => {
         setTaskContent(e.target.value)
 
     }
-
+    let arr = [];
     const handleAutocomplete = (event, value) => {
+        console.log(value)
         value.map((person) => {
-            setPeople([...people, person]);
+            arr.push(person.shortForm)
         })
+        setPeople(arr)
+
     }
 
     const handleSubmit = () => {
@@ -153,8 +156,12 @@ const Board = () => {
         //     id: taskCount, name: `Task #${taskCount + 1}`, state: taskType, content: taskContent
         // })
         setCards([...cards, {
-            id: taskCount, name: `Task #${taskCount + 1}`, state: taskType, content: taskContent, people: [people]
-        }]);
+            id: taskCount, name: `Task #${taskCount + 1}`, state: taskType, content: taskContent, people: 
+                people && people.map((person) => (
+                    person
+                ))
+
+    }]);
 
         setTaskCount(taskCount + 1);
         handleClose();
@@ -184,7 +191,7 @@ const Board = () => {
                             <h3 onClick={crossLine}>{item.name}</h3>
                             {item.content}<br></br><br></br>
                             <h6>People involved</h6>
-                            {item.people.map((person) => (
+                            {item.people&&item.people.map((person) => (person &&
                                 <div className='peopleAvatar'>
                                     <Avatar style={{ width: '45px', height: '45px' }} key={person} sx={{ bgcolor: deepOrange[500] }}>{person}</Avatar>
                                 </div>
@@ -214,7 +221,7 @@ const Board = () => {
 
                             {item.content}<br></br><br></br>
                             <h6>People involved</h6>
-                            {item.people.map((person) => (
+                            {item.people&&item.people.map((person) => (person &&
                                 <div display="inline-block">
                                     <Avatar style={{ width: '45px', height: '45px' }} key={person} sx={{ bgcolor: deepOrange[500] }}>{person}</Avatar>
                                 </div>
@@ -243,7 +250,7 @@ const Board = () => {
                             {/* <CardContent> */}
                             {item.content}<br></br><br></br>
                             <h6>People involved</h6>
-                            {item.people.map((person) => (
+                            {item.people&&item.people.map((person) => (person &&
                                 <div display="inline-block">
                                     <Avatar style={{ width: '45px', height: '45px' }} key={person} sx={{ bgcolor: deepOrange[500] }}>{person}</Avatar>
                                 </div>
@@ -270,7 +277,7 @@ const Board = () => {
                             {/* <CardContent> */}
                             {item.content}<br></br><br></br>
                             <h6>People involved</h6>
-                            {item.people.map((person) => (
+                            {item.people&&item.people.map((person) => (person &&
                                 <div display="inline-block">
                                     <Avatar style={{ width: '45px', height: '45px' }} key={person} sx={{ bgcolor: deepOrange[500] }}>{person}</Avatar>
                                 </div>
@@ -300,7 +307,7 @@ const Board = () => {
                             options={peopleInvolved}
                             onChange={(event, value) => handleAutocomplete(event, value)}
                             getOptionLabel={(option) => option.name || ""}
-                            defaultValue={[peopleInvolved[1]]}
+                            // defaultValue={[peopleInvolved[1]]}
                             renderInput={(params) => (
                                 <TextField
                                     {...params}
