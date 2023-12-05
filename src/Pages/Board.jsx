@@ -199,9 +199,11 @@ const Board = () => {
                         </div>
 
                     ))}
+                    <div style={{backgroundColor:'white'}}>
                     <IconButton aria-label="add" onClick={() => handleOpen("ready")}>
                         <AddIcon /> Add Task
                     </IconButton>
+                    </div>
                 </div>
 
 
@@ -229,9 +231,11 @@ const Board = () => {
                         </div>
                         // <Task key={item.id}  draggable="true" drag={drag} data={item}/>
                     ))}
+                    <div style={{backgroundColor:'white'}}>
                     <IconButton aria-label="add" onClick={() => handleOpen("ip")}>
                         <AddIcon />Add Task
                     </IconButton>
+                    </div>
                 </div>
                 <div className="column column-ip col-lg-3 col-sm-12 columnStyles"
                     data-column="testing"
@@ -257,9 +261,11 @@ const Board = () => {
                             ))}
                         </div>
                     ))}
+                    <div style={{backgroundColor:'white'}}>
                     <IconButton aria-label="add" onClick={() => handleOpen("testing")}>
                         <AddIcon />Add Task
                     </IconButton>
+                    </div>
                 </div>
 
                 <div className="column column-done col-lg-3 col-sm-12 columnStyles"
@@ -284,9 +290,11 @@ const Board = () => {
                             ))}
                         </div>
                     ))}
+                    <div style={{backgroundColor:'white'}}>
                     <IconButton aria-label="add" onClick={() => handleOpen("done")}>
                         <AddIcon />Add Task
                     </IconButton>
+                    </div>
                 </div>
 
                 <Modal
