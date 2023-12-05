@@ -1,0 +1,28 @@
+/* .card {
+    cursor: grab;
+}
+
+.card:active {
+    cursor: grabbing;
+}
+.card {
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.card.dragging {
+    opacity: .5;
+    transform: scale(.8);
+} */
+/* .columnStyles{
+    border: 0.1px solid black;
+} */
+.crossed-line {
+    text-decoration: line-through;
+}
+
+.peopleAvatar {
+    display: flex;
+   
+    flex-direction: row;
+    justify-content: space-between;
+}
